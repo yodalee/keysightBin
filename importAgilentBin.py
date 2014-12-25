@@ -47,7 +47,6 @@ def readfile(binFile, arg):
             if idx == selWav:
                 stop = header.xIncrement * header.nPoints + header.xOrigin
                 time = np.linspace(header.xOrigin, stop, header.nPoints)
-                print(header.xOrigin, stop, header.xIncrement)
 
             for bufIdx in range(header.nWaveformBuffers):
                 bufferHeader = bufHeader._make(
